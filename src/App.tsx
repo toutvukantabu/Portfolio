@@ -6,11 +6,13 @@ import {
   Database,
   Server,
   Code2,
+  GitBranch,
   Terminal,
   Cloud,
   // Mail,
   ArrowRight,
-  BoxIcon,
+  Cpu,
+  Shield
 } from "lucide-react";
 export function App() {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -63,33 +65,48 @@ export function App() {
             {[
               {
                 icon: Database,
-                title: "Database Management",
-                desc: "MySQL, PostgreSQL, MariaDB",
+                title: "Gestion de Bases de Données",
+                desc: "MySQL, PostgreSQL, MariaDB, SQLite",
               },
               {
                 icon: Server,
-                title: "Backend Development",
-                desc: "Node.js, PHP, React, Symfony",
+                title: "Développement Backend",
+                desc: "PHP, Symfony, API Platform, Node.js",
               },
               {
                 icon: Code2,
-                title: "API Development",
-                desc: "REST,WebSockets",
+                title: "Développement d'APIs",
+                desc: "REST, GraphQL, WebSockets",
               },
               {
-                icon: BoxIcon,
-                title: "Version Control",
-                desc: "Git, GitHub, GitLab",
+                icon: GitBranch,
+                title: "Versioning & CI/CD",
+                desc: "Git, GitHub, GitLab, GitFlow",
               },
               {
                 icon: Terminal,
-                title: "DevOps",
-                desc: "Docker, CI/CD, Linux",
+                title: "DevOps & Systèmes",
+                desc: "Docker,Linux, Proxmox, Traefik",
               },
               {
                 icon: Cloud,
-                title: "Cloud Services",
-                desc: "Proxmox",
+                title: "Infrastructure & Hébergement",
+                desc: "Proxmox, Home Lab, Cloudflare",
+              },
+              {
+                icon: Code2,
+                title: "Développement Frontend",
+                desc: "React,Tailwind CSS",
+              },
+              {
+                icon: Cpu,
+                title: "Automatisation & IA",
+                desc: "N8N, ChatGpt",
+              },
+              {
+                icon: Shield,
+                title: "Sécurité & Réseau",
+                desc: "SSO, Authentik, VPN, Firewall, CrowdSec",
               },
             ].map((skill, index) => (
               <div
@@ -111,16 +128,37 @@ export function App() {
           <div className="space-y-12">
             {[
               {
-                role: "Senior Backend Developer",
-                company: "Tech Solutions Inc.",
-                period: "2020 - Present",
-                desc: "Leading backend development team, architecting scalable solutions.",
+                role: "Independent Developer",
+                company: "Self-Employed",
+                period: "July 2024 – Present",
+                desc: "Developing a comprehensive vehicle fleet management system for professionals, including automated fine management and mobile application integration. Working with Clean Architecture principles, test-driven development, and DevOps best practices.",
+                tech: "Symfony, API Platform, Next.js, React, Tailwind CSS, Docker, Kubernetes, CI/CD",
               },
               {
                 role: "Backend Developer",
-                company: "Digital Innovations Ltd",
-                period: "2018 - 2020",
-                desc: "Developed and maintained multiple microservices and APIs.",
+                company: "Wimova, Villeurbanne",
+                period: "March 2024 – June 2024",
+                desc: "Developed a B2B interface coupled with mobile applications for taxi dispatch management. Implemented a Stripe payment system mock, reducing test processing time by 40% in CI. Applied Test-First development under the supervision of a software architect, following Domain-Driven Design, Hexagonal Architecture, and CQRS principles.",
+                tech: "Symfony 6.4, API Platform 3, Docker, PHPUnit, PostgreSQL, Agile methodology",
+              },
+              {
+                role: "Backend Developer",
+                company: "Ma-Sauvegarde, Sérézin-du-Rhône",
+                period: "February 2022 – February 2023",
+                desc: "Redesigned a new extranet for partners to manage IT backup services remotely. Developed two API services: one for user profile and access management, and another for product integration with external Java services. Worked in an ISO 27001-certified data security environment.",
+                tech: "Symfony 6.2, API Platform 3, Docker, PHPUnit, MariaDB, Agile methodology",
+              },
+              {
+                role: "Independent Developer",
+                company: "Self-Employed",
+                period: "2021",
+                desc: "Managed a Discord community for developer support and networking. Hosted the Nuxt Paris Meetup, presenting insights on Nuxt 3 framework.",
+              },
+              {
+                role: "Intern Developer",
+                company: "C-Mantika, Guérande",
+                period: "October 2020",
+                desc: "Performed website testing, bug fixing, and pre-production validation. Gained experience with WordPress and SPIP CMS.",
               },
             ].map((exp, index) => (
               <div

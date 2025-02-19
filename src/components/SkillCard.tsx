@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "lucide-react";
+import { Box} from "lucide-react";
 interface SkillCardProps {
   icon: typeof Box;
   title: string;
