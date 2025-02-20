@@ -38,7 +38,7 @@ export function App() {
     <div className="min-h-screen w-full bg-black text-white relative">
       <BackgroundLines />
       <Navigation />
-      <section className="h-screen flex items-center px-6 relative">
+      <section id='about' className="min-h-screen h-screen flex items-center px-6 relative">
         <div className="max-w-7xl mx-auto w-full pt-20">
           <h1 className="text-6xl font-bold mb-4">
             <span className="text-white block text-2xl mb-2">Hi, I'm</span>
@@ -58,7 +58,7 @@ export function App() {
           </button>
         </div>
       </section>
-      <section className="py-20 px-6 bg-zinc-900/80 backdrop-blur-sm relative">
+      <section id = "skills" className=" min-h-screen py-20 px-6 bg-zinc-900/80 backdrop-blur-sm relative">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Technical Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -122,7 +122,7 @@ export function App() {
           </div>
         </div>
       </section>
-      <section className="py-20 px-6">
+      <section id = "experience" className="min-h-screen py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Professional Experience</h2>
           <div className="space-y-12">
