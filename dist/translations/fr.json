@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Gwendal",
+    "lastname": "Bescont",
+    "description": "Spécialisé dans la création de systèmes backend robustes et évolutifs."
+  },
+  "navigation": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "description": "Je suis un développeur backend passionné par la création de systèmes robustes et évolutifs. J'ai une expérience significative dans le développement de systèmes distribués et de microservices. J'ai également une solide expérience dans la conception et la mise en œuvre de bases de données relationnelles et non relationnelles."
+  },
+  "experiences": [
+    {
+      "role": "Développeur Indépendant",
+      "company": "Auto-Entrepreneur",
+      "period": "Juillet 2024 – Présent",
+      "desc": "Développement d'une application complète de gestion de flotte de véhicules professionnels, intégrant la gestion automatisée des contraventions. Travail en Clean Architecture, développement piloté par les tests (TDD) et bonnes pratiques DevOps.",
+      "tech": "Symfony, API Platform, Next.js, React, Tailwind CSS, Docker, Kubernetes, CI/CD"
+    },
+    {
+      "role": "Développeur Backend",
+      "company": "Wimova, Villeurbanne",
+      "period": "Mars 2024 – Juin 2024",
+      "desc": "Développement d'une interface B2B couplée à des applications mobiles pour la gestion de taxis. Implémentation d'un mock du système de paiement Stripe, réduisant le temps de traitement des tests de 40% en CI. Application du Test-First sous la supervision d'un architecte logiciel en suivant les principes du DDD, Hexagonal Architecture et CQRS.",
+      "tech": "Symfony 6.4, API Platform 3, Docker, PHPUnit, PostgreSQL, Agile"
+    },
+    {
+      "role": "Développeur Backend",
+      "company": "Ma-Sauvegarde, Sérézin-du-Rhône",
+      "period": "Février 2022 – Février 2023",
+      "desc": "Refonte d'un extranet pour les partenaires permettant la gestion des services de sauvegarde IT. Développement de deux API distinctes : une pour la gestion des utilisateurs et une autre pour l'intégration des produits avec des services Java externes. Travail en environnement certifié ISO 27001 pour la sécurité des données.",
+      "tech": "Symfony 6.2, API Platform 3, Docker, PHPUnit, MariaDB, Agile"
+    },
+    {
+      "role": "Développeur Indépendant",
+      "company": "Auto-Entrepreneur",
+      "period": "2021",
+      "desc": "Gestion d'une communauté Discord pour le support aux développeurs et mise en réseau. Organisation et animation du Meetup Nuxt Paris, avec une présentation sur les nouveautés de Nuxt 3.",
+      "tech": ""
+    },
+    {
+      "role": "Stagiaire Développeur",
+      "company": "C-Mantika, Guérande",
+      "period": "Octobre 2020",
+      "desc": "Tests de sites web, correction de bugs et validation en pré-production. Expérience acquise sur WordPress et SPIP CMS.",
+      "tech": ""
+    }
+  ],
+  "skills": [
+    {
+      "icon": "database",
+      "title": "Gestion de Bases de Données",
+      "desc": "MySQL, PostgreSQL, MariaDB, SQLite"
+    },
+    {
+      "icon": "backend",
+      "title": "Développement Backend",
+      "desc": "PHP, Symfony, API Platform, Node.js"
+    },
+    {
+      "icon": "api",
+      "title": "Développement d'APIs",
+      "desc": "REST, GraphQL, WebSockets"
+    },
+    {
+      "icon": "versioning",
+      "title": "Versioning & CI/CD",
+      "desc": "Git, GitHub, GitLab, GitFlow"
+    },
+    {
+      "icon": "devops",
+      "title": "DevOps & Systèmes",
+      "desc": "Docker, Linux, Proxmox, Traefik"
+    },
+    {
+      "icon": "infrastructure",
+      "title": "Infrastructure & Hébergement",
+      "desc": "Proxmox, Home Lab, Cloudflare"
+    },
+    {
+      "icon": "automation",
+      "title": "Automatisation & IA",
+      "desc": "N8N, ChatGPT"
+    },
+    {
+      "icon": "security",
+      "title": "Sécurité & Réseau",
+      "desc": "SSO, Authentik, VPN, Firewall, CrowdSec"
+    }
+  ]
+}
