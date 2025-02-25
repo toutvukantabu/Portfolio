@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Gwendal Bescont",
+    "description": "Specializing in building robust, scalable backend systems and APIs."
+  },
+  "navigation": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  }
+}
