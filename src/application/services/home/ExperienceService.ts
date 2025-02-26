@@ -1,4 +1,4 @@
-import {ExperienceModel} from "../../../domain/models/ExperienceModel";
+import {ExperienceModel} from "@/domain/models/ExperienceModel";
 
 export class ExperienceService {
     getExperiences(): ExperienceModel[] {

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import {useEffect, useRef} from "react";
 
 const useIntersectionObserver = (className: string, threshold = 0.1) => {
     const observerRef = useRef<IntersectionObserver | null>(null);

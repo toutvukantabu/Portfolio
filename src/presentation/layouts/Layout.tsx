@@ -1,6 +1,6 @@
 import React from "react";
-import {Navbar} from "../components/ui/navigation/Navbar.tsx";
-import {BackgroundLines} from "../components/ui/background/BackgroundLines";
+import {Navbar} from "@/presentation/components/ui/navigation/Navbar";
+import {BackgroundLines} from "@/presentation/components/ui/background/BackgroundLines";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (

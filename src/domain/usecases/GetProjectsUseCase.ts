@@ -1,4 +1,4 @@
-import {Project} from "../models/Project";
+import {Project} from "@/domain/models/Project";
 
 export class GetProjectsUseCase {
     execute(): Project[] {

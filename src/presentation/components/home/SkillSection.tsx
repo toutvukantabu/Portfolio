@@ -1,5 +1,5 @@
 import React from "react";
-import { useSkills } from "../../../application/hooks/useSkills";
+import {useSkills} from "@/application/hooks/useSkills";
 
 const SkillsSection: React.FC = () => {
     const skills = useSkills();

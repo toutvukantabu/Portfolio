@@ -1,6 +1,6 @@
 import React from "react";
-import { ExperienceService } from "../../../application/services/home/ExperienceService";
-import { ExperienceModel } from "../../../domain/models/ExperienceModel";
+import {ExperienceService} from "@/application/services/home/ExperienceService";
+import {ExperienceModel} from "@/domain/models/ExperienceModel";
 
 const ExperienceSection: React.FC = () => {
     const experienceService = new ExperienceService();

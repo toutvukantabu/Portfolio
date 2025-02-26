@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import {ProjectService} from "../../../application/services/ProjectService.ts";
+import {ProjectService} from "@/application/services/ProjectService.ts";
 
 const ProjectsList: React.FC = () => {
     const projectService = new ProjectService();

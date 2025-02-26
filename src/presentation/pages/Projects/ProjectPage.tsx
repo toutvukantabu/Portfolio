@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../../layouts/Layout.tsx";
-import ProjectItem from "../../components/project/ProjectItem.tsx";
+import Layout from "@/presentation/layouts/Layout.tsx";
+import ProjectItem from "@/presentation/components/project/ProjectItem.tsx";
 
 const ProjectPage: React.FC = () => {
     return (

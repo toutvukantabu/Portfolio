@@ -1,5 +1,5 @@
 import React from "react";
-import {Project} from "../../../domain/models/Project";
+import {Project} from "@/domain/models/Project";
 
 const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
     return (

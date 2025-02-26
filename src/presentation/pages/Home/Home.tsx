@@ -1,16 +1,16 @@
 import React from "react";
-import HeroSection from "../../components/home/HeroSection.tsx";
-import SkillSection from "../../components/home/SkillSection.tsx";
-import Layout from "../../layouts/Layout.tsx";
-import useIntersectionObserver   from "../../../application/hooks/UseIntersectionObserver.ts";
-import ExperienceSection     from "../../components/home/ExperienceSection.tsx";
+import HeroSection from "@/presentation/components/home/HeroSection";
+import SkillSection from "@/presentation/components/home/SkillSection.tsx";
+import Layout from "@/presentation/layouts/Layout.tsx";
+import useIntersectionObserver from "@/application/hooks/UseIntersectionObserver.ts";
+
 const Home: React.FC = () => {
     useIntersectionObserver("animate-in");
     return (
         <Layout>
             <HeroSection/>
             <SkillSection/>
-            <ExperienceSection/>
+            {/*<ExperienceSection/>*/}
         </Layout>
     );
 };

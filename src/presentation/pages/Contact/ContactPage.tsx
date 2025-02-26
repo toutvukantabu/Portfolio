@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../../layouts/Layout.tsx";
+import Layout from "@/presentation/layouts/Layout.tsx";
 
 const ContactPage: React.FC = () => {
 
