@@ -15,6 +15,9 @@ const HeroSection: React.FC = () => {
                 <p className="text-xl text-gray-400 max-w-2xl mb-8">
                     {t("hero.description")}
                 </p>
+                <button className="bg-green-400 text-black px-8 py-3 rounded-md hover:bg-green-500 transition-colors">
+                    voir mon travail
+                </button>
             </div>
         </section>
     );

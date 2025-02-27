@@ -4,6 +4,7 @@ import SkillSection from "@/presentation/components/home/SkillSection.tsx";
 import Layout from "@/presentation/layouts/Layout.tsx";
 
 import ExperienceSection from "@/presentation/components/home/ExperienceSection.tsx";
+import CollaborateSection from "@/presentation/components/home/CollaborateSection.tsx";
 
 const Home: React.FC = () => {
 
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
             <HeroSection/>
             <SkillSection/>
             <ExperienceSection/>
+            <CollaborateSection/>
         </Layout>
     );
 };
