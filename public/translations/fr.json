@@ -93,5 +93,15 @@
       "title": "Sécurité & Réseau",
       "desc": "SSO, Authentik, VPN, Firewall, CrowdSec"
     }
-  ]
+  ],
+  "contactForm": {
+    "namePlaceholder": "Votre Nom",
+    "nameRequired": "Le nom est requis",
+    "emailPlaceholder": "Votre Email",
+    "emailRequired": "L'email est requis",
+    "emailInvalid": "Email invalide",
+    "messagePlaceholder": "Votre Message",
+    "messageRequired": "Le message est requis",
+    "submitButton": "Envoyer"
+  }
 }
