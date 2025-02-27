@@ -1,5 +1,5 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Home from "./pages/Home/Home.tsx";
+import Home from "@/presentation/pages/home/Home.tsx";
 import Contact from "./pages/Contact/ContactPage";
 import Projects from "./pages/Projects/ProjectsPage.tsx";
 import Project from "./pages/Projects/ProjectPage.tsx";

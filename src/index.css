@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import 'tailwindcss/utilities';
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -25,6 +24,7 @@
 }
 .animate-on-scroll {
   transition: all 1s ease-out;
+  opacity: 1;
 }
 .animate-on-scroll:not(.animate-in) {
   opacity: 0;
@@ -41,7 +41,4 @@
   100% {
     transform: translateY(-8px);
   }
-}
-html {
-  scroll-behavior: smooth;
 }

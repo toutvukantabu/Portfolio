@@ -10,6 +10,5 @@ export const useSkills = (): SkillModel[] => {
     useEffect(() => {
         setSkills(SkillService.getSkills());
     }, [i18n.language]);
-
     return skills;
 };

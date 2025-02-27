@@ -1,26 +1,23 @@
-import {useEffect, useRef} from "react";
+import {useEffect} from "react";
 
-const useIntersectionObserver = (className: string, threshold = 0.1) => {
-    const observerRef = useRef<IntersectionObserver | null>(null);
-
+const useIntersectionObserver = (animationClass: string, targetClass: string, dependencies: any[] = []) => {
     useEffect(() => {
-        observerRef.current = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
+        const targets = document.querySelectorAll(targetClass);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add(className);
+                        entry.target.classList.add(animationClass);
+                        observer.unobserve(entry.target);
                     }
                 });
-            },
-            { threshold }
-        );
-
-        document.querySelectorAll(".animate-on-scroll").forEach((element) => {
-            observerRef.current?.observe(element);
         });
 
-        return () => observerRef.current?.disconnect();
-    }, [className, threshold]);
+        targets.forEach(target => observer.observe(target));
+
+        return () => {
+            targets.forEach(target => observer.unobserve(target));
+        };
+    }, [animationClass, targetClass, ...dependencies]);
 };
 
 export default useIntersectionObserver;
