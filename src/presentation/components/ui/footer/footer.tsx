@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                     </a>
                     <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"
                        className="text-green-400 hover:text-green-400/80 transition-colors">
-                        <img src={GitHubIcon} alt="GitHub" className="w-6 h-6 text-white"/>
+                        <img src={GitHubIcon} alt="GitHub" className="w-6 h-6"/>
                     </a>
                     <a href="https://linkedin.com/yourprofile" target="_blank" rel="noopener noreferrer"
                        className="w-8 h-8 text-green-400 mb-4 transform group-hover:scale-110 transition-transform duration-300">
