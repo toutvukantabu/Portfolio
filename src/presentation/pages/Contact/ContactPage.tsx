@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "@/presentation/layouts/Layout.tsx";
+import ContactSection from "@/presentation/components/contact/ContactSection";
 
 const ContactPage: React.FC = () => {
 
 
     return (
         <Layout>
-            <h1>Contact</h1>
-            <p>Page de contact en construction...</p>
+            <ContactSection/>
         </Layout>
     );
 };
