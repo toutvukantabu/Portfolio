@@ -5,14 +5,13 @@ import Footer from "@/presentation/components/ui/footer/footer.tsx";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
-        <div className="app-container">
+
+        <div className="flex flex-col min-h-screen w-full bg-black text-white relative">
             <Navbar />
-            <div className="min-h-screen w-full bg-black text-white relative">
             <BackgroundLines />
-            <main className="content">{children}</main>
+            <main className="content flex-1">{children}</main>
                 <Footer/>
             </div>
-        </div>
     );
 };
 

@@ -103,5 +103,80 @@
     "messagePlaceholder": "Votre Message",
     "messageRequired": "Le message est requis",
     "submitButton": "Envoyer"
-  }
+  },
+  "projects": [
+    {
+      "id": "1",
+      "title": "Portfolio Personnel",
+      "description": "Un site vitrine présentant mon travail et mes compétences.",
+      "image": "/images/project1.png",
+      "technologies": [
+        "React",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "link": "https://monportfolio.com"
+    },
+    {
+      "id": "2",
+      "title": "Gestionnaire de Tâches",
+      "description": "Une application permettant d'organiser et de suivre ses tâches quotidiennes.",
+      "image": "/images/project2.png",
+      "technologies": [
+        "Vue.js",
+        "Node.js",
+        "MongoDB"
+      ],
+      "link": "https://gesttasks.com"
+    },
+    {
+      "id": "3",
+      "title": "E-commerce Shop",
+      "description": "Un site de commerce en ligne moderne avec intégration de paiement.",
+      "image": "/images/project3.png",
+      "technologies": [
+        "Next.js",
+        "Stripe",
+        "PostgreSQL"
+      ],
+      "link": "https://eshop.com"
+    },
+    {
+      "id": "4",
+      "title": "Blog Développeur",
+      "description": "Une plateforme pour partager mes expériences et tutoriels tech.",
+      "image": "/images/project4.png",
+      "technologies": [
+        "Gatsby",
+        "Markdown",
+        "GraphQL"
+      ],
+      "link": "https://devblog.com"
+    },
+    {
+      "id": "5",
+      "title": "Application Mobile Fitness",
+      "description": "Un tracker d'entraînement pour améliorer ses performances sportives.",
+      "image": "/images/project5.png",
+      "technologies": [
+        "React Native",
+        "Firebase",
+        "Redux"
+      ],
+      "link": "https://fitnessapp.com"
+    },
+    {
+      "id": "6",
+      "title": "Dashboard Analytics",
+      "description": "Un tableau de bord interactif pour visualiser des données en temps réel.",
+      "image": "/images/project6.png",
+      "technologies": [
+        "Angular",
+        "D3.js",
+        "NestJS"
+      ],
+      "link": "https://analyticsdashboard.com"
+    }
+  ]
 }
+

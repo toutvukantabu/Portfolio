@@ -16,7 +16,11 @@ export const Navbar = () => {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-        document.body.style.overflow = isMenuOpen ? "unset" : "hidden";
+        if (!isMenuOpen) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }
     };
 
     const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -41,8 +45,8 @@ export const Navbar = () => {
     return (
         // <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-black/80 backdrop-blur-md py-4" : "bg-transparent py-6"}`}>
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
-  ${scrolled ? "bg-white-300/20 backdrop-blur-md py-4" : "bg-transparent py-6"}`}
+            className={`fixed top-0 left-0 right-0 z-60 transition-all duration-500 ease-in-out
+  ${scrolled ? "bg-white/30 backdrop-blur-md py-4" : "bg-transparent py-6"}`}
         >
 
             <div className="max-w-7xl mx-auto px-6">
@@ -95,10 +99,11 @@ export const Navbar = () => {
 
             {/* Menu Mobile */}
             <div
-                className={`fixed inset-0 bg-black/90 backdrop-blur-lg transition-transform duration-300 transform md:hidden
-        ${isMenuOpen ? "translate-x-0 opacity-100 z-50" : "translate-x-full opacity-0 z-[-1]"}`}
+                className={`fixed height: 100vh inset-0 bg-black/90 backdrop-blur-lg transition-transform duration-300 md:hidden z-[99] min-h-screen
+        ${isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
             >
-                {/* Bouton Fermer (Croix) */}
+
+            {/* Bouton Fermer (Croix) */}
                 <button onClick={toggleMenu}
                         className="absolute top-6 right-6 text-gray-300 hover:text-green-400 transition-colors"
                         aria-label="Close menu">

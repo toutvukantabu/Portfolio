@@ -1,5 +1,4 @@
 import {ExperienceModel} from "@/domain/models/ExperienceModel.ts";
-
 import i18n from "@/core/i18n";
 
 export class ExperienceService {
