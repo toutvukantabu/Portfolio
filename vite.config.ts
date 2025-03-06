@@ -20,5 +20,11 @@ export default defineConfig({
             "@": path.resolve(__dirname, "./src"),
         },
     },
-    base: "/Portfolio",
+    base: process.env.VITE_BASE_URL || "/",
+    build: {
+        outDir: "dist",
+    },
+    define: {
+        __APP_ENV__: JSON.stringify(process.env.VITE_ENV),
+    },
 })
