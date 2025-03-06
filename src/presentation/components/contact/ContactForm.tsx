@@ -3,7 +3,7 @@ import {useTranslation} from "react-i18next";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {Mail, MessageSquare, Send, User} from "lucide-react";
 import {ContactFormData} from "@/domain/models/ContactFormData";
-import {submitContactForm} from "@/application/useCases/submitContactForm";
+import {submitContactForm} from "@/domain/usecases/submitContactForm.ts";
 
 const ContactForm: React.FC = () => {
     const {t} = useTranslation();

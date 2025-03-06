@@ -1,7 +1,7 @@
 import {ExperienceModel} from "@/domain/models/ExperienceModel.ts";
-import i18n from "@/core/i18n";
+import i18n from "@/core/i18n.ts";
 
-export class ExperienceService {
+export class ExperienceRepository {
     static getExperiences(): ExperienceModel[] {
         const translatedExperiences = i18n.t("experiences", {returnObjects: true});
         if (!Array.isArray(translatedExperiences) || translatedExperiences.length === 0) {

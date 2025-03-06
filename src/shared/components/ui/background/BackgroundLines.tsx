@@ -10,7 +10,7 @@ export const BackgroundLines = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-    return <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+    return <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute w-full h-full">
             {[...Array(5)].map((_, i) => <div key={i} className="absolute h-[3px] bg-green-400/10 w-[200%] left-[-50%]"
                                               style={{

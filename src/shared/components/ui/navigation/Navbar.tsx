@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Link, NavLink, useLocation} from "react-router-dom";
 import {Menu, X} from "lucide-react";
+import {ReactComponent as Logo} from "@/assets/icons/logo.svg";
 
 export const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -43,21 +44,20 @@ export const Navbar = () => {
 
 
     return (
-        // <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-black/80 backdrop-blur-md py-4" : "bg-transparent py-6"}`}>
         <nav
             className={`fixed top-0 left-0 right-0 z-60 transition-all duration-500 ease-in-out
-  ${scrolled ? "bg-white/30 backdrop-blur-md py-4" : "bg-transparent py-6"}`}
+        ${scrolled ? "bg-white/40 backdrop-blur-lg shadow-md p-0 opacity-100" : "bg-transparent py-6 opacity-90"}
+    `}
         >
-
             <div className="max-w-7xl mx-auto px-6">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <Link to="/" className="text-green-400 font-bold text-xl tracking-wider">
-                        Gwendal Bescont
+                        <Logo/>
                     </Link>
                     <div className="hidden md:flex gap-8">
 
-                        {["about", "skills", "experience"].map((id) => (
+                        {["à propos", "compétences", "éxperience"].map((id) => (
                             <a
                                 key={id}
                                 href={`#${id}`}
@@ -71,7 +71,7 @@ export const Navbar = () => {
                         ))}
 
                         {/* Pages */}
-                        {["projects", "contact"].map((path) => (
+                        {["projets", "contact"].map((path) => (
                             <NavLink
                                 key={path}
                                 to={`/${path}`}
@@ -114,7 +114,7 @@ export const Navbar = () => {
                 <div
                     className="flex flex-col items-center justify-center gap-8 px-6 pt-20 pb-10 max-h-screen overflow-y-auto">
                     {/* Ancres */}
-                    {["about", "skills", "experience"].map((id) => (
+                    {["à propos", "compétences", "éxperience"].map((id) => (
                         <a
                             key={id}
                             href={`#${id}`}

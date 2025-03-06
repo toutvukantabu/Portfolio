@@ -1,7 +1,7 @@
-import i18n from "@/core/i18n";
+import i18n from "@/core/i18n.ts";
 import {ProjectModel} from "@/domain/models/ProjectModel.ts";
 
-export class ProjectService {
+export class ProjectRepository {
     static getProjects(): ProjectModel[] {
         const projects = i18n.t("projects", {returnObjects: true});
         if (!Array.isArray(projects)) return [];

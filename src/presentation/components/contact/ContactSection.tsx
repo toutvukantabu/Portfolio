@@ -1,13 +1,13 @@
 import React from "react";
 import {Mail, Phone} from "lucide-react";
 import ContactForm from "@/presentation/components/contact/ContactForm";
-import useIntersectionObserver from "@/application/hooks/UseIntersectionObserver.ts";
+import useIntersectionObserver from "@/shared/hooks/UseIntersectionObserver.ts";
 
 const ContactSection: React.FC = () => {
     useIntersectionObserver("animate-in", ".animate-on-scroll");
 
     return (
-        <section className="py-100 px-6 bg-zinc-900/80 backdrop-blur-sm">
+        <section className="py-60 px-6 bg-zinc-900/80 backdrop-blur-sm">
             <div className="max-w-7xl mx-auto text-center">
                 <div className="text-center max-w-2xl mx-auto mb-15">
                     <h2 className="text-4xl font-bold mb-4">Let's Work Together</h2>
