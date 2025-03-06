@@ -23,6 +23,9 @@ export default defineConfig({
     base: process.env.VITE_BASE_URL || "/",
     build: {
         outDir: "dist",
+        rollupOptions: {
+            input: "index.html"
+        },
     },
     define: {
         __APP_ENV__: JSON.stringify(process.env.VITE_ENV),
