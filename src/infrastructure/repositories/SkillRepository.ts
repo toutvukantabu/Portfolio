@@ -13,7 +13,7 @@ const iconMap: Record<string, LucideIcon> = {
     security: Shield,
 };
 
-export class SkillRepositoory {
+export class SkillRepository {
     static getSkills(): SkillModel[] {
         const translatedSkills = i18n.t("skills", { returnObjects: true });
 
