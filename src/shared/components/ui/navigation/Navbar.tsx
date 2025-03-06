@@ -1,151 +1,65 @@
-import React, {useEffect, useState} from "react";
-import {Link, NavLink, useLocation} from "react-router-dom";
-import {Menu, X} from "lucide-react";
+import React from "react";
+import {Link, NavLink} from "react-router-dom";
+import {Menu} from "lucide-react";
 import {ReactComponent as Logo} from "@/assets/icons/logo.svg";
+import {useNavbar} from "@/application/hooks/useNavbar";
+import {useNavigationLinks} from "@/application/hooks/useNavigationLinks";
+import {useSmoothScroll} from "@/application/hooks/useSmoothScroll";
+import MobileMenu from "./MobileMenu";
+import LanguageSwitcher from "@/shared/components/ui/language/LanguageSwitcher";
 
-export const Navbar = () => {
-    const [scrolled, setScrolled] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const location = useLocation();
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-        if (!isMenuOpen) {
-            document.body.classList.add("overflow-hidden");
-        } else {
-            document.body.classList.remove("overflow-hidden");
-        }
-    };
-
-    const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-        e.preventDefault();
-        setIsMenuOpen(false);
-
-        const element = document.getElementById(id);
-
-        if (location.pathname === "/") {
-            if (element) {
-                window.scrollTo({
-                    top: element.offsetTop - 80, // Décalage pour compenser la navbar
-                    behavior: "smooth",
-                });
-            }
-        } else {
-            window.location.href = `/#${id}`;
-        }
-    };
-
+const Navbar: React.FC = () => {
+    const {scrolled, isMenuOpen, toggleMenu} = useNavbar();
+    const {links, pages} = useNavigationLinks();
+    const {scrollToSection} = useSmoothScroll();
 
     return (
-        <nav
-            className={`fixed top-0 left-0 right-0 z-60 transition-all duration-500 ease-in-out
-        ${scrolled ? "bg-white/40 backdrop-blur-lg shadow-md p-0 opacity-100" : "bg-transparent py-6 opacity-90"}
-    `}
-        >
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="flex justify-between items-center">
-                    {/* Logo */}
-                    <Link to="/" className="text-green-400 font-bold text-xl tracking-wider">
-                        <Logo/>
-                    </Link>
-                    <div className="hidden md:flex gap-8">
+        <nav className={`fixed top-0 left-0 right-0 z-60 transition-all duration-500 ${
+            scrolled ? "bg-white/40 backdrop-blur-lg shadow-md" : "bg-transparent py-6"
+        }`}>
+            <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                {/* Logo */}
+                <Link to="/" className="text-green-400 font-bold text-xl tracking-wider">
+                    <Logo/>
+                </Link>
 
-                        {["à propos", "compétences", "éxperience"].map((id) => (
-                            <a
-                                key={id}
-                                href={`#${id}`}
-                                onClick={(e) => handleAnchorClick(e, id)}
-                                className="relative text-gray-300 hover:text-green-400 transition-all duration-300 group"
-                            >
-                                {id.charAt(0).toUpperCase() + id.slice(1)}
-                                <span
-                                    className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"/>
-                            </a>
-                        ))}
-
-                        {/* Pages */}
-                        {["projets", "contact"].map((path) => (
-                            <NavLink
-                                key={path}
-                                to={`/${path}`}
-                                className={({isActive}) =>
-                                    `relative text-gray-300 hover:text-green-400 transition-all duration-300 group ${
-                                        isActive ? "text-green-400" : ""
-                                    }`
-                                }
-                            >
-                                {path.charAt(0).toUpperCase() + path.slice(1)}
-                                <span
-                                    className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"/>
-                            </NavLink>
-                        ))}
-                    </div>
-
-                    {/* Menu Burger (Mobile) */}
-                    <button onClick={toggleMenu}
-                            className="md:hidden text-green-400 hover:text-green-300 transition-colors"
-                            aria-label="Toggle menu">
-                        <Menu className="w-6 h-6"/>
-                    </button>
-                </div>
-            </div>
-
-            {/* Menu Mobile */}
-            <div
-                className={`fixed height: 100vh inset-0 bg-black/90 backdrop-blur-lg transition-transform duration-300 md:hidden z-[99] min-h-screen
-        ${isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
-            >
-
-            {/* Bouton Fermer (Croix) */}
-                <button onClick={toggleMenu}
-                        className="absolute top-6 right-6 text-gray-300 hover:text-green-400 transition-colors"
-                        aria-label="Close menu">
-                    <X className="w-8 h-8"/>
-                </button>
-
-                {/* Liens du menu mobile avec scroll activé */}
-                <div
-                    className="flex flex-col items-center justify-center gap-8 px-6 pt-20 pb-10 max-h-screen overflow-y-auto">
-                    {/* Ancres */}
-                    {["à propos", "compétences", "éxperience"].map((id) => (
+                {/* Navigation Desktop */}
+                <div className="hidden md:flex gap-8">
+                    {links.map(({id, label}) => (
                         <a
                             key={id}
                             href={`#${id}`}
-                            onClick={(e) => handleAnchorClick(e, id)}
-                            className="relative text-2xl text-gray-300 hover:text-green-400 transition-all duration-300 group"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                scrollToSection(id);
+                            }}
+                            className="text-gray-300 hover:text-green-400"
                         >
-                            {id.charAt(0).toUpperCase() + id.slice(1)}
-                            <span
-                                className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"/>
+                            {label}
                         </a>
                     ))}
-
-                    {/* Pages */}
-                    {["projects", "contact"].map((path) => (
-                        <NavLink
-                            key={path}
-                            to={`/${path}`}
-                            onClick={toggleMenu}
-                            className={({isActive}) =>
-                                `relative text-2xl text-gray-300 hover:text-green-400 transition-all duration-300 group ${
-                                    isActive ? "text-green-400" : ""
-                                }`
-                            }
-                        >
-                            {path.charAt(0).toUpperCase() + path.slice(1)}
-                            <span
-                                className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"/>
+                    {pages.map(({path, label}) => (
+                        <NavLink key={path} to={`/${path}`} className={({isActive}) =>
+                            `text-gray-300 hover:text-green-400 ${isActive ? "text-green-400" : ""}`
+                        }>
+                            {label}
                         </NavLink>
                     ))}
                 </div>
+
+                {/* Switcher de langue */}
+                <LanguageSwitcher/>
+
+                {/* Menu Burger (Mobile) */}
+                <button onClick={toggleMenu} className="md:hidden text-green-400">
+                    <Menu className="w-6 h-6"/>
+                </button>
             </div>
+
+            {/* Menu Mobile */}
+            <MobileMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} links={links} pages={pages}/>
         </nav>
     );
 };
+
+export default Navbar;
