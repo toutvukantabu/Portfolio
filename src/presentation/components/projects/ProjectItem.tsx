@@ -1,5 +1,5 @@
 import {useParams} from "react-router-dom";
-import {useProjects} from "@/application/hooks/useProjects.ts";
+import {useProjects} from "@/application/hooks/useProjects";
 import React from "react";
 
 const ProjectDetailPage: React.FC = () => {

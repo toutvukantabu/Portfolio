@@ -1,2 +1,2 @@
 /// <reference types="vite/client" />
-/// <reference path="./svg.d.ts" />
+/// <reference path="../svg.d.ts" />

@@ -1,5 +1,5 @@
-import i18n from "@/core/i18n.ts";
-import {ProjectModel} from "@/domain/models/ProjectModel.ts";
+import i18n from "@/core/i18n";
+import {ProjectModel} from "@/domain/models/ProjectModel";
 
 export class ProjectRepository {
     static getProjects(): ProjectModel[] {

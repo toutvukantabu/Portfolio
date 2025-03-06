@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
-import {ProjectRepository} from "@/infrastructure/repositories/ProjectRepository.ts";
-import {ProjectModel} from "@/domain/models/ProjectModel.ts";
+import {ProjectRepository} from "@/infrastructure/repositories/ProjectRepository";
+import {ProjectModel} from "@/domain/models/ProjectModel";
 import {useTranslation} from "react-i18next";
 
 export const useProjects = (): ProjectModel[] => {

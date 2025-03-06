@@ -1,6 +1,6 @@
-import {SkillModel} from "@/domain/models/SkillModel.ts";
+import {SkillModel} from "@/domain/models/SkillModel";
 import {Cloud, Code2, Cpu, Database, GitBranch, LucideIcon, Server, Shield, Terminal} from "lucide-react";
-import i18n from "@/core/i18n.ts";
+import i18n from "@/core/i18n";
 
 const iconMap: Record<string, LucideIcon> = {
     database: Database,

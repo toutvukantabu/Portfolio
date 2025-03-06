@@ -1,7 +1,7 @@
 import React from "react";
 import {Mail, Phone} from "lucide-react";
 import ContactForm from "@/presentation/components/contact/ContactForm";
-import useIntersectionObserver from "@/shared/hooks/UseIntersectionObserver.ts";
+import useIntersectionObserver from "@/shared/hooks/UseIntersectionObserver";
 
 const ContactSection: React.FC = () => {
     useIntersectionObserver("animate-in", ".animate-on-scroll");

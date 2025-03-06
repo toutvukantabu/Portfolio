@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {ExperienceModel} from "@/domain/models/ExperienceModel";
-import {ExperienceRepository} from "@/infrastructure/repositories/ExperienceRepository.ts";
+import {ExperienceRepository} from "@/infrastructure/repositories/ExperienceRepository";
 
 export const useExperiences = (): ExperienceModel[] => {
     const {i18n} = useTranslation();

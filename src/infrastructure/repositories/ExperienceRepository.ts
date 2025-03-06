@@ -1,5 +1,5 @@
-import {ExperienceModel} from "@/domain/models/ExperienceModel.ts";
-import i18n from "@/core/i18n.ts";
+import {ExperienceModel} from "@/domain/models/ExperienceModel";
+import i18n from "@/core/i18n";
 
 export class ExperienceRepository {
     static getExperiences(): ExperienceModel[] {
