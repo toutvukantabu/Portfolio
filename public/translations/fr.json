@@ -9,7 +9,8 @@
     "about": "À propos",
     "skills": "Compétences",
     "experience": "Expérience",
-    "contact": "Contact"
+    "contact": "Contact",
+    "projects": "Projets"
   },
   "about": {
     "title": "À propos de moi",
@@ -95,14 +96,15 @@
     }
   ],
   "contactForm": {
-    "namePlaceholder": "Votre Nom",
-    "nameRequired": "Le nom est requis",
-    "emailPlaceholder": "Votre Email",
-    "emailRequired": "L'email est requis",
-    "emailInvalid": "Email invalide",
-    "messagePlaceholder": "Votre Message",
-    "messageRequired": "Le message est requis",
-    "submitButton": "Envoyer"
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Votre adresse email",
+    "messagePlaceholder": "Votre message",
+    "sendMessage": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "nameRequired": "Le nom est requis.",
+    "emailRequired": "L'adresse email est requise.",
+    "messageRequired": "Le message est requis.",
+    "emailInvalid": "Veuillez entrer une adresse email valide."
   },
   "projects": [
     {
