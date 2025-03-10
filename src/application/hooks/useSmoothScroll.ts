@@ -1,18 +1,33 @@
 import {useEffect} from "react";
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 export const useSmoothScroll = () => {
     const location = useLocation();
+    const navigate = useNavigate();
 
+    // 🔥 Fonction pour scroller vers une section
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
 
-        if (!element) return;
-
-        window.scrollTo({
-            top: element.offsetTop - 80, // Décalage pour la Navbar
-            behavior: "smooth",
-        });
+        if (window.location.pathname !== "/") {
+            navigate("/");
+            setTimeout(() => {
+                const targetElement = document.getElementById(id);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: "smooth",
+                    });
+                }
+            }, 100);
+        } else {
+            if (element) {
+                window.scrollTo({
+                    top: element.offsetTop - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
     };
 
     useEffect(() => {
@@ -20,7 +35,7 @@ export const useSmoothScroll = () => {
             const id = location.hash.replace("#", "");
             setTimeout(() => scrollToSection(id), 100);
         }
-    }, [location]);
+    }, [location]); // ✅ Se déclenche lors du changement d'URL
 
     return {scrollToSection};
 };

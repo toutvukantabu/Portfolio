@@ -9,7 +9,7 @@ const Layout: React.FC = () => {
         <div className="flex flex-col min-h-screen w-full bg-black text-white relative">
             <Navbar />
             <BackgroundLines />
-            <main className="content flex-1">
+            <main className="content flex-1 z-10 overflow-visible">
                 <Outlet/>
             </main>
             <Footer/>

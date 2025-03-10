@@ -179,6 +179,12 @@
       ],
       "link": "https://analyticsdashboard.com"
     }
-  ]
+  ],
+  "collaborateSection": {
+    "title": "Travaillons Ensemble",
+    "description": "Ouvert à de nouvelles opportunités et collaborations. Donnez vie à vos idées avec des solutions web modernes.",
+    "button": "travaillons ensemble"
+  }
+
 }
 

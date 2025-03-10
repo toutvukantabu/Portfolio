@@ -7,16 +7,16 @@ const ContactSection: React.FC = () => {
     useIntersectionObserver("animate-in", ".animate-on-scroll");
 
     return (
-        <section className="py-60 px-6 bg-zinc-900/80 backdrop-blur-sm">
+        <section className="flex items-center justify-center min-h-screen px-6 bg-zinc-900/80 backdrop-blur-sm">
             <div className="max-w-7xl mx-auto text-center">
                 <div className="text-center max-w-2xl mx-auto mb-15">
                     <h2 className="text-4xl font-bold mb-4">Let's Work Together</h2>
                     <p className="text-gray-400">
-                        Open for new opportunities and collaborations. Feel free to reach
-                        out!
+                        Open for new opportunities and collaborations. Feel free to reach out!
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 gap-12 items-center">
+                    {/* Carte contact */}
                     <div className="space-y-8 animate-on-scroll opacity-0">
                         <div
                             className="p-6 border border-green-400/20 rounded-lg
@@ -41,6 +41,8 @@ const ContactSection: React.FC = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Formulaire */}
                     <div
                         className="animate-on-scroll opacity-0"
                         style={{

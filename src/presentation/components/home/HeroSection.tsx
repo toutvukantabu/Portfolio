@@ -4,10 +4,6 @@ import {useTranslation} from "react-i18next";
 const HeroSection: React.FC = () => {
     const { t } = useTranslation();
 
-    // const scrollToWork = () => {
-    //     document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
-    // };
-
     return (
         <section id="about" className="min-h-screen h-screen flex items-center px-6 relative">
             <div className="max-w-7xl mx-auto w-full pt-20 z-10">
