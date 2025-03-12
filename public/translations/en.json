@@ -1,53 +1,55 @@
 {
   "hero": {
-    "greeting": "Hi, I'm",
-    "name": "Gwendal Bescont",
-    "description": "Specializing in building robust, scalable backend systems and APIs."
+    "greeting": "Hello, I'm",
+    "name": "Gwendal",
+    "lastname": "Bescont",
+    "description": "Specialized in creating robust and scalable backend systems."
   },
   "navigation": {
     "about": "About",
     "skills": "Skills",
     "experience": "Experience",
-    "contact": "Contact"
+    "contact": "Contact",
+    "projects": "Projects"
   },
   "about": {
     "title": "About Me",
-    "description": "I'm a backend developer passionate about creating robust and scalable systems. I have significant experience in developing distributed systems and microservices. I also have a solid background in designing and implementing both relational and non-relational databases."
+    "description": "I'm a backend developer passionate about creating robust and scalable systems. I have extensive experience in developing distributed systems and microservices. I also have solid experience designing and implementing relational and non-relational databases."
   },
   "experiences": [
     {
       "role": "Freelance Developer",
       "company": "Self-Employed",
       "period": "July 2024 – Present",
-      "desc": "Developing a comprehensive application for managing professional vehicle fleets, including automated fine management. Working with Clean Architecture, test-driven development (TDD), and good DevOps practices.",
+      "desc": "Development of a comprehensive professional vehicle fleet management application, integrating automated ticket management. Worked using Clean Architecture, Test-Driven Development (TDD), and best DevOps practices.",
       "tech": "Symfony, API Platform, Next.js, React, Tailwind CSS, Docker, Kubernetes, CI/CD"
     },
     {
       "role": "Backend Developer",
       "company": "Wimova, Villeurbanne",
       "period": "March 2024 – June 2024",
-      "desc": "Developing a B2B interface coupled with mobile applications for taxi management. Implemented a mock of the Stripe payment system, reducing CI testing time by 40%. Applied Test-First under the supervision of a software architect following DDD, Hexagonal Architecture, and CQRS principles.",
+      "desc": "Developed a B2B interface coupled with mobile apps for taxi management. Implemented a mock of the Stripe payment system, reducing test processing time by 40% in CI. Applied Test-First methodology supervised by a software architect following DDD principles, Hexagonal Architecture, and CQRS.",
       "tech": "Symfony 6.4, API Platform 3, Docker, PHPUnit, PostgreSQL, Agile"
     },
     {
       "role": "Backend Developer",
       "company": "Ma-Sauvegarde, Sérézin-du-Rhône",
       "period": "February 2022 – February 2023",
-      "desc": "Redesigning an extranet for partners allowing IT backup service management. Developed two distinct APIs: one for user management and another for product integration with external Java services. Worked in an ISO 27001 certified environment for data security.",
+      "desc": "Redesign of a partner extranet for IT backup service management. Developed two distinct APIs: one for user management and another for product integration with external Java services. Worked in an ISO 27001 certified environment for data security.",
       "tech": "Symfony 6.2, API Platform 3, Docker, PHPUnit, MariaDB, Agile"
     },
     {
       "role": "Freelance Developer",
       "company": "Self-Employed",
       "period": "2021",
-      "desc": "Managed a Discord community for developer support and networking. Organized and hosted the Nuxt Paris Meetup with a presentation on the new features of Nuxt 3.",
+      "desc": "Managed a Discord community providing developer support and networking. Organized and facilitated Nuxt Paris Meetup, including a presentation on new features of Nuxt 3.",
       "tech": ""
     },
     {
-      "role": "Intern Developer",
+      "role": "Developer Intern",
       "company": "C-Mantika, Guérande",
       "period": "October 2020",
-      "desc": "Tested websites, fixed bugs and validated in pre-production. Gained experience with WordPress and SPIP CMS.",
+      "desc": "Tested websites, fixed bugs, and validated pre-production. Gained experience with WordPress and SPIP CMS.",
       "tech": ""
     }
   ],
@@ -58,46 +60,58 @@
       "desc": "MySQL, PostgreSQL, MariaDB, SQLite"
     },
     {
-      "icon": "code",
+      "icon": "backend",
       "title": "Backend Development",
-      "desc": "Symfony, API Platform, Node.js, Express.js"
+      "desc": "PHP, Symfony, API Platform, Node.js"
     },
     {
-      "icon": "cloud",
-      "title": "Cloud Services",
-      "desc": "AWS, GCP, Azure"
+      "icon": "api",
+      "title": "API Development",
+      "desc": "REST, GraphQL, WebSockets"
     },
     {
-      "icon": "security",
-      "title": "Security Best Practices",
-      "desc": ""
+      "icon": "versioning",
+      "title": "Versioning & CI/CD",
+      "desc": "Git, GitHub, GitLab, GitFlow"
     },
     {
       "icon": "devops",
-      "title": "DevOps Practices",
-      "desc": ""
+      "title": "DevOps & Systems",
+      "desc": "Docker, Linux, Proxmox, Traefik"
+    },
+    {
+      "icon": "versioning",
+      "title": "Versioning & CI/CD",
+      "desc": "Git, GitHub, GitLab, GitFlow"
+    },
+    {
+      "icon": "infrastructure",
+      "title": "Infrastructure & Networking",
+      "desc": "Proxmox, Cloudflare"
+    },
+    {
+      "icon": "automation",
+      "title": "Automation & AI",
+      "desc": "N8N, ChatGPT"
+    },
+    {
+      "icon": "security",
+      "title": "Security & Networking",
+      "desc": "SSO, Networking"
     }
   ],
-  "contact": {
-    "title": "Contact Me",
-    "description": "Feel free to reach out for collaborations or inquiries."
-  },
-  "footer": {
-    "text": "© 2024 Gwendal Bescont. All rights reserved."
-  },
-  "socials": {
-    "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "email": "Email"
-  },
   "contactForm": {
-    "namePlaceholder": "Your Name",
-    "nameRequired": "Name is required",
-    "emailPlaceholder": "Your Email",
-    "emailRequired": "Email is required",
-    "messagePlaceholder": "Your Message",
-    "messageRequired": "Message is required",
+    "title": "Let's Work Together",
+    "description": "Let's collaborate to build something amazing.",
+    "send": "Send Message",
     "sending": "Sending...",
-    "sendMessage": "Send Message"
+    "nameRequired": "Name is required.",
+    "emailRequired": "Email address is required.",
+    "messageRequired": "Message is required.",
+    "emailInvalid": "Please enter a valid email address."
+  },
+  "collaborateSection": {
+    "title": "Let's Work Together",
+    "description": "Interested in new opportunities or collaboration? Let's connect!"
   }
 }
