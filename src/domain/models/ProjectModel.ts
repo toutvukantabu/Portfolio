@@ -5,4 +5,5 @@ export interface ProjectModel {
     image: string;
     technologies: string[];
     link?: string;
+    repo?: string;
 }

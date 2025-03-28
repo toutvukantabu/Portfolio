@@ -11,7 +11,7 @@ const ContactSection: React.FC = () => {
         <section className="flex items-center justify-center min-h-screen px-6 bg-zinc-900/80 backdrop-blur-sm">
             <div className="max-w-6xl w-full mx-auto">
                 {/* Titre accrocheur */}
-                <div className="text-center mb-12">
+                <div className="text-center mb-12 ">
                     <h2 className="text-5xl font-bold mb-6 text-white">
                         Let's Work Together
                     </h2>

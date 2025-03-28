@@ -117,7 +117,8 @@
         "Tailwind CSS",
         "TypeScript"
       ],
-      "link": "https://monportfolio.com"
+      "link": "https://monportfolio.com",
+      "repo": "https://monportfolio.com"
     },
     {
       "id": "2",
@@ -128,8 +129,7 @@
         "Vue.js",
         "Node.js",
         "MongoDB"
-      ],
-      "link": "https://gesttasks.com"
+      ]
     },
     {
       "id": "3",

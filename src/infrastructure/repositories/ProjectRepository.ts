@@ -12,6 +12,7 @@ export class ProjectRepository {
             image: proj.image,
             technologies: proj.technologies,
             link: proj.link || "",
+            repo: proj.repo || "",
         }));
     }
 }
