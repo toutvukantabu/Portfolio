@@ -1,6 +1,6 @@
 import React from "react";
-import {useSkills} from "@/application/hooks/useSkills";
-import useIntersectionObserver from "@/shared/hooks/UseIntersectionObserver";
+import {useSkills} from "@/presentation/hooks/useSkills";
+import useIntersectionObserver from "@/shared/presentation/hooks/UseIntersectionObserver";
 
 const SkillsSection: React.FC = () => {
     const skills = useSkills();

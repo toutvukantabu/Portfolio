@@ -1,7 +1,7 @@
-import {ExperienceModel} from "@/domain/models/ExperienceModel";
+import {ExperienceModel} from "@/domain/model/experience/ExperienceModel";
 import i18n from "@/core/i18n";
 
-export class ExperienceRepository {
+export class StrapiExperienceRepository {
     static getExperiences(): ExperienceModel[] {
         const translatedExperiences = i18n.t("experiences", {returnObjects: true});
         if (!Array.isArray(translatedExperiences) || translatedExperiences.length === 0) {

@@ -1,6 +1,6 @@
 import React from "react";
 import {Mail, MessageSquare, Send, User} from "lucide-react";
-import {useContactForm} from "@/application/hooks/useContactForm";
+import {useContactForm} from "@/presentation/hooks/useContactForm";
 
 const ContactForm: React.FC = () => {
     const {t, register, handleSubmit, errors, isLoading, onSubmit} = useContactForm();

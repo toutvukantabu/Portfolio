@@ -1,5 +1,5 @@
 import {useParams} from "react-router-dom";
-import {useProjects} from "@/application/hooks/useProjects";
+import {useProjects} from "@/presentation/hooks/useProjects";
 import React from "react";
 import {Github, Globe} from "lucide-react"; // Import des icônes
 

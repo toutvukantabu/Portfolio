@@ -2,11 +2,11 @@ import React from "react";
 import {Link, NavLink} from "react-router-dom";
 import {Menu} from "lucide-react";
 import {ReactComponent as Logo} from "@/assets/icons/logo.svg";
-import {useNavbar} from "@/application/hooks/useNavbar";
-import {useNavigationLinks} from "@/application/hooks/useNavigationLinks";
-import {useSmoothScroll} from "@/application/hooks/useSmoothScroll";
-import MobileMenu from "./MobileMenu";
-import LanguageSwitcher from "@/shared/components/ui/language/LanguageSwitcher";
+import {useNavbar} from "@/presentation/hooks/useNavbar";
+import {useNavigationLinks} from "@/presentation/hooks/useNavigationLinks";
+import {useSmoothScroll} from "@/presentation/hooks/useSmoothScroll";
+import MobileMenu from "@/shared/presentation/components/ui/navigation/MobileMenu";
+import LanguageSwitcher from "@/shared/presentation/components/ui/language/LanguageSwitcher";
 
 const Navbar: React.FC = () => {
     const {scrolled, isMenuOpen, toggleMenu} = useNavbar();

@@ -1,6 +1,6 @@
 import React from "react";
 import ContactForm from "@/presentation/components/contact/ContactForm";
-import useIntersectionObserver from "@/shared/hooks/UseIntersectionObserver";
+import useIntersectionObserver from "@/shared/presentation/hooks/UseIntersectionObserver";
 
 const ContactSection: React.FC = () => {
     // Ajout des classes spécifiques pour chaque bloc

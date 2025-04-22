@@ -1,7 +1,7 @@
 import i18n from "@/core/i18n";
-import {ProjectModel} from "@/domain/models/ProjectModel";
+import {ProjectModel} from "@/domain/model/project/ProjectModel";
 
-export class ProjectRepository {
+export class StrapiProjectRepository {
     static getProjects(): ProjectModel[] {
         const projects = i18n.t("projects", {returnObjects: true});
         if (!Array.isArray(projects)) return [];

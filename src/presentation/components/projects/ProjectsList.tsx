@@ -1,5 +1,5 @@
 import React from "react";
-import {useProjects} from "@/application/hooks/useProjects";
+import {useProjects} from "@/presentation/hooks/useProjects";
 import {useNavigate} from "react-router-dom";
 
 const ProjectsPage: React.FC = () => {

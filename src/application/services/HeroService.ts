@@ -1,5 +1,5 @@
 import {BaseStrapiService} from "@/infrastructure/api/BaseStrapiService";
-import {HeroModel} from "@/domain/models/HeroModel";
+import {HeroModel} from "@/domain/model/hero/HeroModel";
 
 const service = new BaseStrapiService<HeroModel>("homes");
 

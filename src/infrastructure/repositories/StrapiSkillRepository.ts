@@ -1,4 +1,4 @@
-import {SkillModel} from "@/domain/models/SkillModel";
+import {SkillModel} from "@/domain/model/skill/SkillModel";
 import {Cloud, Code2, Cpu, Database, GitBranch, LucideIcon, Server, Shield, Terminal} from "lucide-react";
 import i18n from "@/core/i18n";
 
@@ -13,7 +13,7 @@ const iconMap: Record<string, LucideIcon> = {
     security: Shield,
 };
 
-export class SkillRepository {
+export class StrapiSkillRepository {
     static getSkills(): SkillModel[] {
         const translatedSkills = i18n.t("skills", { returnObjects: true });
 

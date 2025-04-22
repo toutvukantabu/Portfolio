@@ -1,6 +1,6 @@
 import React from "react";
-import {useExperiences} from "@/application/hooks/useExperiences";
-import useIntersectionObserver from "@/shared/hooks/UseIntersectionObserver";
+import {useExperiences} from "@/presentation/hooks/useExperiences";
+import useIntersectionObserver from "@/shared/presentation/hooks/UseIntersectionObserver";
 
 const ExperienceSection: React.FC = () => {
     const experiences = useExperiences();

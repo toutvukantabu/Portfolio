@@ -1,4 +1,4 @@
-import {ContactFormData} from "../models/ContactFormData";
+import {ContactFormData} from "@/domain/model/contactFormData/ContactFormData";
 
 export const SubmitContactForm = async (data: ContactFormData): Promise<void> => {
     try {

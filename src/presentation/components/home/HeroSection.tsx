@@ -1,5 +1,5 @@
 import React from "react";
-import {useHeroContent} from "@/application/hooks/useHeroContent";
+import {useHeroContent} from "@/presentation/hooks/useHeroContent";
 
 const HeroSection: React.FC = () => {
     const hero = useHeroContent();

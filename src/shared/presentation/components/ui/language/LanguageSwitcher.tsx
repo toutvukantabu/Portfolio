@@ -1,5 +1,5 @@
 import React from "react";
-import {useLanguageSwitcher} from "@/application/hooks/useLanguageSwitcher";
+import {useLanguageSwitcher} from "@/presentation/hooks/useLanguageSwitcher";
 
 const LanguageSwitcher: React.FC = () => {
     const {currentLanguage, changeLanguage, isFading} = useLanguageSwitcher();

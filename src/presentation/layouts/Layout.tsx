@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "@/shared/components/ui/navigation/Navbar";
-import {BackgroundLines} from "@/shared/components/ui/background/BackgroundLines";
-import Footer from "@/shared/components/ui/footer/footer";
+import Navbar from "@/shared/presentation/components/ui/navigation/Navbar";
+import {BackgroundLines} from "@/shared/presentation/components/ui/background/BackgroundLines";
+import Footer from "@/shared/presentation/components/ui/footer/footer";
 import {Outlet} from "react-router-dom";
 
 const Layout: React.FC = () => {
