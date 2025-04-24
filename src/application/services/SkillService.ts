@@ -1,10 +1,11 @@
-import {BaseStrapiService} from "@/infrastructure/api/BaseStrapiService";
+import {SkillRepository} from "@/domain/model/skill/SkillRepository";
+import {StrapiSkillRepository} from "@/infrastructure/repositories/skill/StrapiSkillRepository";
 import {SkillModel} from "@/domain/model/skill/SkillModel";
 
-const service = new BaseStrapiService<SkillModel>("homes");
+const repository: SkillRepository = new StrapiSkillRepository();
 
 export class SkillService {
-    static async getSkills(locale: string): Promise<SkillModel[] | null> {
-        return await service.getAll(locale);
+    static async getSkills(locale: string): Promise<SkillModel[]> {
+        return repository.getAll(locale);
     }
 }

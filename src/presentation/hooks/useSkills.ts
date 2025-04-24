@@ -1,14 +1,18 @@
 import {useEffect, useState} from "react";
-import {useTranslation} from "react-i18next";
+import {SkillService} from "@/application/services/SkillService";
+import {useLocale} from "@/shared/presentation/hooks/useLocale";
 import {SkillModel} from "@/domain/model/skill/SkillModel";
-import {StrapiSkillRepository} from "@/infrastructure/repositories/StrapiSkillRepository";
 
 export const useSkills = (): SkillModel[] => {
-    const { i18n } = useTranslation();
     const [skills, setSkills] = useState<SkillModel[]>([]);
+    const locale = useLocale();
 
     useEffect(() => {
-        setSkills(StrapiSkillRepository.getSkills());
-    }, [i18n.language]);
+        (async () => {
+            const result = await SkillService.getSkills(locale);
+            setSkills(result);
+        })();
+    }, [locale]);
+
     return skills;
 };

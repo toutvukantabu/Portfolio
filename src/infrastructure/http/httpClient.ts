@@ -1,8 +1,11 @@
 import axios from "axios";
 
+/*const token = import.meta.env.VITE_STRAPI_TOKEN;*/
+const baseURL = import.meta.env.VITE_STRAPI_URL;
 export const httpClient = axios.create({
-    baseURL: "http://localhost:1337/api",
+    baseURL: `${baseURL}/`,
     headers: {
         "Content-Type": "application/json",
+        /*        Authorization: `Bearer ${token}`,*/
     },
 });

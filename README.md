@@ -31,7 +31,7 @@ Le build sera généré dans le dossier `dist/`.
  ├── 📂 core/            # Configuration globale (i18n...)
  │
  ├── 📂 domain/          # Modèles et entités métier
- │   ├── 📂 models/      # Interfaces TypeScript
+ │   ├── 📂 model/      # Interfaces TypeScript
  |
  ├── 📂 infrastructure/  # Traductions et autres infrastructures
  │   ├── 📂 translations/

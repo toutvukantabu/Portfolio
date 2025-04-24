@@ -3,7 +3,7 @@ import {HeroRepository} from "@/domain/model/hero/HeroRepository";
 import {HeroModel} from "@/domain/model/hero/HeroModel";
 
 export class StrapiHeroRepository implements HeroRepository {
-    async getHero(locale: string): Promise<HeroModel> {
+    async getContent(locale: string): Promise<HeroModel> {
         const response = await httpClient.get(`/homes?locale=${locale}`);
         const raw = response.data.data[0];
 

@@ -80,11 +80,6 @@
       "desc": "Docker, Linux, Proxmox, Traefik"
     },
     {
-      "icon": "versioning",
-      "title": "Versioning & CI/CD",
-      "desc": "Git, GitHub, GitLab, GitFlow"
-    },
-    {
       "icon": "infrastructure",
       "title": "Infrastructure & Networking",
       "desc": "Proxmox, Cloudflare"
