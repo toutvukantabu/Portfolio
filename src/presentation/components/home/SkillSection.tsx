@@ -2,8 +2,17 @@ import React from "react";
 import {useSkills} from "@/presentation/hooks/useSkills";
 import useIntersectionObserver from "@/shared/presentation/hooks/UseIntersectionObserver";
 
+/**
+ * 🖥️ SkillSection
+ *
+ * ▶️ Rôle :
+ * Composant UI qui affiche la liste des compétences.
+ *
+ * ▶️ Fonctionnement :
+ * Utilise le hook useSkills pour récupérer les données et les rend avec des icônes.
+ */
 const SkillsSection: React.FC = () => {
-    const skills = useSkills();
+    const {skills} = useSkills();
     useIntersectionObserver("animate-in", ".animate-on-scroll", [skills]);
     return (
         <section id="skills" className=" py-20 px-6 bg-zinc-900/80 backdrop-blur-sm">

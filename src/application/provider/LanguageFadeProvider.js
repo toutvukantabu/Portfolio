@@ -1,7 +1,7 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { LanguageFadeContext } from "@/application/context/LanguageFadeContext";
+import { LanguageFadeContext } from "@/presentation/context/LanguageFadeContext";
 export const LanguageFadeProvider = ({ children }) => {
     const { i18n } = useTranslation();
     const [isFading, setIsFading] = useState(false);

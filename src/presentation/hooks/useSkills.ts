@@ -1,18 +1,28 @@
-import {useEffect, useState} from "react";
-import {SkillService} from "@/application/services/SkillService";
-import {useLocale} from "@/shared/presentation/hooks/useLocale";
+import {useContext, useEffect, useState} from "react";
 import {SkillModel} from "@/domain/model/skill/SkillModel";
+import {useLocale} from "@/shared/presentation/hooks/useLocale";
+import {SkillsContext} from "@/presentation/context/skill/skillsContext";
 
-export const useSkills = (): SkillModel[] => {
+/**
+ * 🧩 useSkills
+ *
+ * ▶️ Rôle :
+ * Hook React pour charger les compétences.
+ *
+ * ▶️ Fonctionnement :
+ * Récupère le UseCase via Context, exécute le chargement, et retourne les Skills.
+ */
+
+export const useSkills = () => {
+    const useCase = useContext(SkillsContext);
     const [skills, setSkills] = useState<SkillModel[]>([]);
     const locale = useLocale();
 
     useEffect(() => {
-        (async () => {
-            const result = await SkillService.getSkills(locale);
-            setSkills(result);
-        })();
-    }, [locale]);
+        if (!useCase) return;
 
-    return skills;
+        useCase.execute(locale).then(setSkills);
+    }, [useCase, locale]);
+
+    return {skills};
 };
