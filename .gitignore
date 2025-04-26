@@ -1673,3 +1673,4 @@ dist-ssr
 /docker/render.yaml
 /docker/SECURITY.md
 /docker/strapi/public/uploads/.gitkeep
+*.js
