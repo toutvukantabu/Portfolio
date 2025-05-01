@@ -1,4 +1,4 @@
-import i18n from "@/core/i18n";
+import i18n from "@/core/i18n/i18n";
 
 export class StrapiProjectRepository {
     static getProjects() {

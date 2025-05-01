@@ -1,5 +1,5 @@
 import {ExperienceModel} from "@/domain/model/experience/ExperienceModel";
-import i18n from "@/core/i18n";
+import i18n from "@/core/i18n/i18n";
 
 export class StrapiExperienceRepository {
     static getExperiences(): ExperienceModel[] {
