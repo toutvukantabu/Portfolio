@@ -1,7 +1,9 @@
 export interface ExperienceModel {
+    id: number;
     role: string;
     company: string;
-    period: string;
-    desc: string;
-    tech?: string;
+    description: string;
+    tech?: string[];
+    startDate: string;
+    endDate?: string;
 }

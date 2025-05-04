@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {ExperienceModel} from "@/domain/model/experience/ExperienceModel";
-import {StrapiExperienceRepository} from "@/infrastructure/repositories/StrapiExperienceRepository";
+import {StrapiExperienceRepository} from "@/infrastructure/repositories/experience/StrapiExperienceRepository";
 
 export const useExperiences = (): ExperienceModel[] => {
     const {i18n} = useTranslation();
