@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {HeroService} from "@/application/services/HeroService";
+import {HeroService} from "@/application/services/hero/HeroService";
 import {HeroModel} from "@/domain/model/hero/HeroModel";
 import {useLocale} from "@/shared/presentation/hooks/useLocale";
 

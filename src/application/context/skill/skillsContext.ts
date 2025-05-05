@@ -1,5 +1,5 @@
 import {createContext} from "react";
-import {GetSkillsUseCase} from "@/application/usecases/getSkillUsecase";
+import {GetSkillsUseCase} from "@/application/usecases/skill/getSkillUsecase";
 
 /**
  * ⚡ SkillsContext

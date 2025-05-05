@@ -1,6 +1,6 @@
 import {ReactNode} from "react";
-import {SkillsContext} from "@/presentation/context/skill/skillsContext";
-import {GetSkillsUseCase} from "@/application/usecases/getSkillUsecase";
+import {SkillsContext} from "@/application/context/skill/skillsContext";
+import {GetSkillsUseCase} from "@/application/usecases/skill/getSkillUsecase";
 
 
 /**

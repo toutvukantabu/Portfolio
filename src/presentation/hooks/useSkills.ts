@@ -1,7 +1,7 @@
 import {useContext, useEffect, useState} from "react";
 import {SkillModel} from "@/domain/model/skill/SkillModel";
 import {useLocale} from "@/shared/presentation/hooks/useLocale";
-import {SkillsContext} from "@/presentation/context/skill/skillsContext";
+import {SkillsContext} from "@/application/context/skill/skillsContext";
 
 /**
  * 🧩 useSkills
