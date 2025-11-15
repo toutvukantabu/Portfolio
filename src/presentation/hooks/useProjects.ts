@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {StrapiProjectRepository} from "@/infrastructure/repositories/StrapiProjectRepository";
-import {ProjectModel} from "@/domain/model/project/ProjectModel";
+import {ProjectModel} from "@/domain/project/entities/ProjectModel";
 import {useTranslation} from "react-i18next";
 
 export const useProjects = (): ProjectModel[] => {

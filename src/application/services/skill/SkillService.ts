@@ -1,6 +1,6 @@
-import {SkillRepository} from "@/domain/model/skill/SkillRepository";
+import {SkillRepository} from "@/domain/skill/repositories/SkillRepository";
 import {StrapiSkillRepository} from "@/infrastructure/repositories/skill/StrapiSkillRepository";
-import {SkillModel} from "@/domain/model/skill/SkillModel";
+import {SkillModel} from "@/domain/skill/entities/SkillModel";
 
 const repository: SkillRepository = new StrapiSkillRepository();
 

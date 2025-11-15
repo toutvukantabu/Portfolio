@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tech_tags",
+  "info": {
+    "singularName": "tech-tag",
+    "pluralName": "tech-tags",
+    "displayName": "Tech-tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

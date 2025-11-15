@@ -1,4 +1,4 @@
-import {ExperienceModel} from "@/domain/model/experience/ExperienceModel";
+import {ExperienceModel} from "@/domain/experience/entities/ExperienceModel";
 
 export const MapExperienceToModel = (item: any): ExperienceModel => {
     const experience = item.experience;

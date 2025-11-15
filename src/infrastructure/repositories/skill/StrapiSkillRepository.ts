@@ -1,6 +1,6 @@
 import {httpClient} from "@/infrastructure/http/httpClient";
-import {SkillModel} from "@/domain/model/skill/SkillModel";
-import {SkillRepository} from "@/domain/model/skill/SkillRepository";
+import {SkillModel} from "@/domain/skill/entities/SkillModel";
+import {SkillRepository} from "@/domain/skill/repositories/SkillRepository";
 import {mapStrapiSkillToModel} from "@/infrastructure/mapper/skill/mapStrapiSkillToModel";
 
 

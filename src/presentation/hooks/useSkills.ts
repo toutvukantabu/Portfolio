@@ -1,5 +1,5 @@
 import {useContext, useEffect, useState} from "react";
-import {SkillModel} from "@/domain/model/skill/SkillModel";
+import {SkillModel} from "@/domain/skill/entities/SkillModel";
 import {useLocale} from "@/shared/presentation/hooks/useLocale";
 import {SkillsContext} from "@/application/context/skill/skillsContext";
 

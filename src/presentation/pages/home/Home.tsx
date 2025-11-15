@@ -5,7 +5,7 @@ import CollaborateSection from "@/presentation/components/home/CollaborateSectio
 import ExperienceSection from "@/presentation/components/home/ExperienceSection";
 import SkillSection from "@/presentation/components/home/SkillSection"; // Attention ici, chemin exact
 import {StrapiSkillRepository} from "@/infrastructure/repositories/skill/StrapiSkillRepository";
-import {GetSkillsUseCase} from "@/application/usecases/skill/getSkillUsecase";
+import {GetSkillsUseCase} from "@/application/skill/getSkillUsecase";
 import {SkillsProvider} from "@/presentation/context/skill/skillsProvider";
 
 const skillRepo = new StrapiSkillRepository();

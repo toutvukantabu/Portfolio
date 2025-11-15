@@ -1,19 +1,18 @@
 import {httpClient} from "@/infrastructure/http/httpClient";
-import {HeroRepository} from "@/domain/model/hero/HeroRepository";
-import {HeroModel} from "@/domain/model/hero/HeroModel";
+import {IHeroRepository} from "@/domain/hero/repositories/IHeroRepository";
+import {toDomain} from "@/infrastructure/mapper/hero/toDomain";
+import {HeroDTO} from "@/application/dto/HeroDTO";
+import {Hero} from "@/domain/hero/entities/Hero";
 
-export class StrapiHeroRepository implements HeroRepository {
-    async getContent(locale: string): Promise<HeroModel> {
-        const response = await httpClient.get(`/homes?locale=${locale}`);
-        const raw = response.data.data[0];
+export class StrapiHeroRepository implements IHeroRepository {
+  async findByLocale(locale: string): Promise<Hero | null> {
 
-        return {
-            id: raw.id,
-            title: raw.attributes.title,
-            name: raw.attributes.name,
-            lastname: raw.attributes.lastname,
-            description: raw.attributes.description,
-            callToAction: raw.attributes.callToAction,
-        };
-    }
+    const response = await httpClient.get<{ data: HeroDTO }>(`/homes`, {
+      params: {locale}
+    });
+    const dto = response.data.data;
+    if (!dto) return null;
+
+    return toDomain(dto);
+  }
 }

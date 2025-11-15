@@ -1,8 +1,11 @@
 import {httpClient} from "@/infrastructure/http/httpClient";
-import {ExperienceModel} from "@/domain/model/experience/ExperienceModel";
+import {ExperienceModel} from "@/domain/experience/entities/ExperienceModel";
 import {MapExperienceToModel} from "@/infrastructure/mapper/experience/MapExperienceToModel";
+import {ExperienceRepository} from "@/domain/experience/repositories/ExperienceReository";
+import {injectable} from "tsyringe";
 
-export class StrapiExperienceRepository {
+@injectable()
+export class StrapiExperienceRepository implements ExperienceRepository {
     async getAll(locale: string): Promise<ExperienceModel[]> {
         const response = await httpClient.get("/experiences", {
             params: {populate: "*", locale},

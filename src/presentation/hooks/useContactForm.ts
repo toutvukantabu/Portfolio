@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {SubmitHandler, useForm} from "react-hook-form";
-import {ContactFormData} from "@/domain/model/contactFormData/ContactFormData";
+import {ContactFormData} from "@/domain/contactFormData/ContactFormData";
 import {SubmitContactForm} from "@/domain/usecases/SubmitContactForm";
 
 export const useContactForm = () => {

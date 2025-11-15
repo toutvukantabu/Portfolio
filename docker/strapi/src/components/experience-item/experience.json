@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_experience_item_experiences",
+  "info": {
+    "displayName": "experienceItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "location": {
+      "type": "string"
+    },
+    "techTags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tech-tag.tech-tag"
+    },
+    "company_role": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company-role.company-role"
+    }
+  }
+}

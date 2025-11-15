@@ -1,5 +1,5 @@
 import i18n from "@/core/i18n/i18n";
-import {ProjectModel} from "@/domain/model/project/ProjectModel";
+import {ProjectModel} from "@/domain/project/entities/ProjectModel";
 
 export class StrapiProjectRepository {
     static getProjects(): ProjectModel[] {

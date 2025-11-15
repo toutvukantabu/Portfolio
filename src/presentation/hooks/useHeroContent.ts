@@ -1,11 +1,11 @@
 import {useEffect, useState} from "react";
 import {HeroService} from "@/application/services/hero/HeroService";
-import {HeroModel} from "@/domain/model/hero/HeroModel";
+import {Hero} from "@/domain/hero/entities/Hero";
 import {useLocale} from "@/shared/presentation/hooks/useLocale";
 
 
-export const useHeroContent = (): HeroModel | null => {
-    const [content, setContent] = useState<HeroModel | null>(null);
+export const useHeroContent = (): Hero | null => {
+    const [content, setContent] = useState<Hero | null>(null);
     const locale = useLocale();
 
     useEffect(() => {
